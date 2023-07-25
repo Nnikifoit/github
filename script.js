@@ -1,31 +1,31 @@
 "use strict";
 
 /* переменная: */
-/* let number = 4.6;
+let number = 4.6;
 console.log('string' * 9);
 
 const persone = 'Alex';
 
-const bool = true; */
+const bool = true;
 
 /* объект: */
-/* const obj = {
+const obj = {
     name: 'John',
     age: 25,
     isMarried: false
-} */
+}
 
-/* console.log(obj.age); */
-/* console.log(obj['name']) */
+console.log(obj.age);
+console.log(obj['name'])
 
 /* массив: */
-/* let arr = ['plum.png', 'apple.png', 6, 'orange.jpg', {}, []];
-console.log(arr[0,1]); */
+let arr = ['plum.png', 'apple.png', 6, 'orange.jpg', {}, []];
+console.log(arr[0,1]);
 
 
 /* Общение с пользователем */
 
-/* const result = confirm('Are you here?');
+const result = confirm('Are you here?');
 console.log(result);
 
 const answer = +prompt('Вам есть 18?', '');
@@ -38,29 +38,29 @@ answers[2] = prompt('Age', '');
 
 console.log(answers);
 
-document.write(answers); */
+document.write(answers);
 
 
 /* Интерполяция */
 
-/* const category = 'toys';
+const category = 'toys';
 console.log(`https://someurl.com/${category}/5`);
 
 const user = 'Ivan';
-alert(`Привет, ${user}`); */
+alert(`Привет, ${user}`);
 
 
 /* Операторы */
 
-/* let incr = 10,
-    decr = 10; */
+let incr = 10,
+    decr = 10;
 
     /* Посфиксные */
-/* incr++;
-decr--; */    
+incr++;
+decr--;    
 
     /* Префиксные */
-/* ++incr;
+++incr;
 --decr; 
 
 console.log(incr);
@@ -68,32 +68,102 @@ console.log(decr);
 
 console.log(15%2);
 
-console.log(2 + 2 *2 !== '8'); */
+console.log(2 + 2 *2 !== '8');
 
 /* &&
 || */
 
-/* const isChecked = false;
+const isChecked = false;
       isClose = false;
 
-console.log(isChecked || !isClose); */
+console.log(isChecked || !isClose);
 
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
 
-const a = prompt('Один из последних просмотренных фильмов?', ''),
-      b = prompt('На сколько оцените его?', ''),
-      c = prompt('Один из последних просмотренных фильмов?', ''),
-      d = prompt('На сколько оцените его?', '');
+/* Условия */
 
-personalMovieDB.movies[a] = b;    
-personalMovieDB.movies[c] = d; 
+if (4) {
+    console.log('ok');
+} else {
+    console.log('no ok');
+}
 
-console.log(personalMovieDB);
+const num = 50;
+
+if(num == 50) {
+    console.log('errors');
+} else if (num == 50 ) {
+    console.log('mas');
+} else {
+    console.log('yes');
+}
+
+(num == 50) ? console.log('ok') : console.log('error');
+
+const nums = 50;
+
+switch (nums) {
+    case 49:
+        console.log('Нет');
+        break;
+    case 100:
+        console.log('Нет!!');
+        break;
+    case 51:
+        console.log('Да');
+        break;
+    default: 
+        console.log('Не в этот раз');
+        break;
+}
+
+
+
+/* Циклы */
+
+let nu = 50;
+
+while (nu <= 55) {
+    console.log(nu);
+    nu++;
+}
+
+do {
+    console.log(nu);
+    nu++;
+}
+while (nu <=55);
+
+for (let i = 1; i < 10; i++) {
+    if(i == 6) {
+        /* break; */
+        continue;
+    }
+
+    console.log(i);
+}
+
+
+/* Вложеные циклы */
+
+for(let i = 0; i < 3; i++) {
+    console.log(i);
+    for(let j = 0; j < 3; j++) {
+        console.log(j);
+    }
+}
+
+const lines = 5;
+let results = '';
+
+for (let i = 0; i <= lines; i++) {
+    for (let j = 0; j < lines - i; j++) {
+        results += " ";
+    }
+    for (let j = 0; j < 2 * i + 1; j++) {
+        results += "*";
+    }
+    results += "\n";
+}
+
+console.log(results)
